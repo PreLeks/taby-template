@@ -10,202 +10,130 @@
 
 <body>
 
-  <div class="container">
-    <section class="material-card">
+  <div class="content">
 
-      <h2 class="material-card__brand">
-        Living Materials
-      </h2>
+    <h1 class="content__title">
+      Living Materials
+    </h1>
 
-      <ul class="material-card__tabs">
-        <li class="material-card__tab">
-          <button type="button" data-tab="architecture" class="material-card__tab-btn material-card__tab-btn--active">
-            Архитектура
-          </button>
-        </li>
-        <li class="material-card__tab">
-          <button type="button" data-tab="interiors" class="material-card__tab-btn">
-            Интерьеры
-          </button>
-        </li>
-        <li class="material-card__tab">
-          <button type="button" data-tab="journeys" class="material-card__tab-btn">
-            Путешествия
-          </button>
-        </li>
-        <li class="material-card__tab">
-          <button type="button" data-tab="interview" class="material-card__tab-btn">
-            Интервью
-          </button>
-        </li>
-        <li class="material-card__tab">
-          <button type="button" data-tab="photos" class="material-card__tab-btn">
-            Фотографии
-          </button>
-        </li>
-      </ul>
-      <!-- Архитектура света -->
-      <article id="architecture" class="material-card__content material-card__content--active">
-        <img src="img/архитектура_света.jpg" alt="Высокие урбанистические здания" class="material-card__img">
-        <div class="material-card__info">
-          <h3 class="material-card__title">
-            Архитектура света
-          </h3>
-          <div class="material-card__descr">
-            Современные здания и работа с естественным освещением.
-          </div>
-          <ul class="material-card__statistic">
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                48 страниц
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                12 проектов
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                94%
-              </span>
-            </li>
-          </ul>
-          <button type="button" class="material-card__btn">
-            Читать материал
-          </button>
+    <ul class="content__list">
+      <li class="content__item">
+        <button type="button" data-tab="architecture" class="content__btn content__btn--active">
+          Архитектура
+        </button>
+      </li>
+      <li class="content__item">
+        <button type="button" data-tab="interiors" class="content__btn">
+          Интерьеры
+        </button>
+      </li>
+      <li class="content__item">
+        <button type="button" data-tab="travel" class="content__btn">
+          Путешествия
+        </button>
+      </li>
+      <li class="content__item">
+        <button type="button" data-tab="interview" class="content__btn">
+          Интервью
+        </button>
+      </li>
+      <li class="content__item">
+        <button type="button" data-tab="photos" class="content__btn">
+          Фотографии
+        </button>
+      </li>
+    </ul>
+    <!-- Архитектура света -->
+    <div data-tab-content="architecture" class="content__inner content__inner--active">
+      <div class="content__image">
+        <img src="img/архитектура_света.jpg" alt="Высокие урбанистические здания" class="content__pic">
+      </div>
+      <div class="content__text">
+        <h2 class="content__subtitle">Архитектура света</h2>
+        <p class="content__subdescr">
+          Современные здания и работа с естественным освещением.
+        </p>
+        <div class="content__tags">
+          <div class="content__tag">48 страниц</div>
+          <div class="content__tag">12 проектов</div>
+          <div class="content__tag">94%</div>
         </div>
-      </article>
-      <!-- Тёплые интерьеры -->
-      <article id="interiors" class="material-card__content">
-        <img src="img/тёплые_интерьеры.jpg" alt="Красивая светлая спальня" class="material-card__img">
-        <div class="material-card__info">
-          <h3 class="material-card__title">
-            Тёплые интерьеры
-          </h3>
-          <div class="material-card__descr">
-            Домашние пространства в природной палитре.
-          </div>
-          <ul class="material-card__statistic">
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                16 домов
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                8 дизайнеров
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                4 страны
-              </span>
-            </li>
-          </ul>
-          <button type="button" class="material-card__btn">
-            Открыть подборку
-          </button>
+        <a href="#" class="content__link">Читать материал</a>
+      </div>
+    </div>
+    <!-- Тёплые интерьеры -->
+    <div data-tab-content="interiors" class="content__inner">
+      <div class="content__image">
+        <img src="img/тёплые_интерьеры.jpg" alt="Красивая светлая спальня" class="content__pic">
+      </div>
+      <div class="content__text">
+        <h2 class="content__subtitle">Тёплые интерьеры</h2>
+        <p class="content__subdescr">
+          Домашние пространства в природной палитре.
+        </p>
+        <div class="content__tags">
+          <div class="content__tag">16 домов</div>
+          <div class="content__tag">8 дизайнеров</div>
+          <div class="content__tag">4 страны</div>
         </div>
-      </article>
-      <!-- Маршруты Европы -->
-      <article id="journeys" class="material-card__content">
-        <img src="img/маршруты_европы.jpg" alt="Шоссейная автомобильная дорога" class="material-card__img">
-        <div class="material-card__info">
-          <h3 class="material-card__title">
-            Маршруты Европы
-          </h3>
-          <div class="material-card__descr">
-            Живописные места и небольшие города.
-          </div>
-          <ul class="material-card__statistic">
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                27 мест
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                9 городов
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                6 стран
-              </span>
-            </li>
-          </ul>
-          <button type="button" class="material-card__btn">
-            Смотреть маршрут
-          </button>
+        <a href="#" class="content__link">Открыть подборку</a>
+      </div>
+    </div>
+    <!-- Маршруты Европы -->
+    <div data-tab-content="travel" class="content__inner">
+      <div class="content__image">
+        <img src="img/маршруты_европы.jpg" alt="Шоссейная автомобильная дорога" class="content__pic">
+      </div>
+      <div class="content__text">
+        <h2 class="content__subtitle">Маршруты Европы</h2>
+        <p class="content__subdescr">
+          Живописные места и небольшие города.
+        </p>
+        <div class="content__tags">
+          <div class="content__tag">27 мест</div>
+          <div class="content__tag">9 городов</div>
+          <div class="content__tag">6 стран</div>
         </div>
-      </article>
-      <!-- Разговоры с авторами -->
-      <article id="interview" class="material-card__content">
-        <img src="img/разговоры_с_авторами.jpg" alt="Портретное фото" class="material-card__img">
-        <div class="material-card__info">
-          <h3 class="material-card__title">
-            Разговоры с авторами
-          </h3>
-          <div class="material-card__descr">
-            Большие интервью с архитекторами и фотографами.
-          </div>
-          <ul class="material-card__statistic">
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                11 гостей
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                6 часов
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                100+ фото
-              </span>
-            </li>
-          </ul>
-          <button type="button" class="material-card__btn">
-            Читать интервью
-          </button>
+        <a href="#" class="content__link">Смотреть маршрут</a>
+      </div>
+    </div>
+    <!-- Разговоры с авторами -->
+    <div data-tab-content="interview" class="content__inner">
+      <div class="content__image">
+        <img src="img/разговоры_с_авторами.jpg" alt="Портретное фото" class="content__pic">
+      </div>
+      <div class="content__text">
+        <h2 class="content__subtitle">Разговоры с авторами</h2>
+        <p class="content__subdescr">
+          Большие интервью с архитекторами и фотографами.
+        </p>
+        <div class="content__tags">
+          <div class="content__tag">11 гостей</div>
+          <div class="content__tag">6 часов</div>
+          <div class="content__tag">100+ фото</div>
         </div>
-      </article>
-      <!-- Фотоистории -->
-      <article id="photos" class="material-card__content">
-        <img src="img/фотоистории.jpg" alt="Фотограф на вершине горы" class="material-card__img">
-        <div class="material-card__info">
-          <h3 class="material-card__title">
-            Фотоистории
-          </h3>
-          <div class="material-card__descr">
-            Подборка атмосферных редакционных серий.
-          </div>
-          <ul class="material-card__statistic">
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                320 фото
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                18 серий
-              </span>
-            </li>
-            <li class="material-card__statistic-item">
-              <span class="material-card__statistic-val">
-                5 выпусков
-              </span>
-            </li>
-          </ul>
-          <button type="button" class="material-card__btn">
-            Открыть галерею
-          </button>
+        <a href="#" class="content__link">Читать интервью</a>
+      </div>
+    </div>
+    <!-- Фотоистории -->
+    <div data-tab-content="photos" class="content__inner">
+      <div class="content__image">
+        <img src="img/фотоистории.jpg" alt="Фотограф на вершине горы" class="content__pic">
+      </div>
+      <div class="content__text">
+        <h2 class="content__subtitle">Фотоистории</h2>
+        <p class="content__subdescr">
+          Подборка атмосферных редакционных серий.
+        </p>
+        <div class="content__tags">
+          <div class="content__tag">320 фото</div>
+          <div class="content__tag">18 серий</div>
+          <div class="content__tag">5 выпусков</div>
         </div>
-      </article>
+        <a href="#" class="content__link">Открыть галерею</a>
+      </div>
+    </div>
 
-    </section>
   </div>
 
   <script src="js/script.js"></script>

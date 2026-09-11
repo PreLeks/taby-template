@@ -1,25 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const tabButtons = document.querySelectorAll('.material-card__tab-btn');
-  const tabContents = document.querySelectorAll('.material-card__content');
+const tabs = document.querySelectorAll('[data-tab]');
+const contents = document.querySelectorAll('[data-tab-content]');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
 
-      tabButtons.forEach(btn => {
-        btn.classList.remove('material-card__tab-btn--active');
-      });
-      tabContents.forEach(content => {
-        content.classList.remove('material-card__content--active');
-      });
+    tabs.forEach(b => b.classList.remove('content__btn--active'));
+    btn.classList.add('content__btn--active');
 
-      button.classList.add('material-card__tab-btn--active');
-
-      const btnId = button.getAttribute('data-tab');
-      const contentId = document.getElementById(btnId);
-
-      if (contentId) {
-        contentId.classList.add('material-card__content--active');
-      }
+    contents.forEach(c => {
+      c.classList.toggle('content__inner--active', c.dataset.tabContent === tab);
     });
   });
 });
